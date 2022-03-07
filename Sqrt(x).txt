@@ -1,0 +1,26 @@
+/*
+Given a non-negative integer x, compute and return the square root of x.
+Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.
+Note: You are not allowed to use any built-in exponent function or operator, such as pow(x, 0.5) or x ** 0.5.
+*/
+
+#include<iostream>
+using namespace std;
+
+int squareroot(int num){
+	int x=1,count=0;
+	while(x*x<=num){
+		count++;
+		x++;
+	}
+	return count;
+}
+
+int main(){
+	int num;
+	cout<<"Enter the number for which you want to find the square root"<<endl;
+	cin>>num;
+	
+	int sqr=squareroot(num);
+	cout<<sqr;
+}
